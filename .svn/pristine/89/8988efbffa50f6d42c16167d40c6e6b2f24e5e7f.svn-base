@@ -1,0 +1,16 @@
+package com.trading.platform.service;
+
+import com.trading.platform.model.TwoFactorOTP;
+import com.trading.platform.model.User;
+
+public interface TwoFactorOtpService {
+
+    public TwoFactorOTP createTwoFactorOtp(User user, String otp, String jwt);
+
+    public TwoFactorOTP findByUser(Long userId);
+
+    public TwoFactorOTP findById(String id);
+
+    public void deleteTwoFactorOtp(TwoFactorOTP twoFactorOTP);
+
+}
